@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats Bakery</title>
+    <style>
+        /* Reset */
+        * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+
+        /* Header */
+        header {
+            background-color: #f8b500;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover { text-decoration: underline; }
+
+        /* Sections */
+        section { padding: 50px 20px; text-align: center; }
+        section#home .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        section#home img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Menu */
+        #menu ul { list-style:none; }
+        #menu li { font-size:18px; margin:10px 0; }
+
+        /* Contact Form */
+        form {
+            display:flex;
+            flex-direction:column;
+            max-width:400px;
+            margin:20px auto;
+            gap:10px;
+        }
+        input, textarea {
+            padding:10px;
+            border-radius:5px;
+            border:1px solid #ccc;
+            width:100%;
+        }
+        button {
+            padding:10px;
+            border:none;
+            border-radius:5px;
+            background-color:#f8b500;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+        }
+        button:hover { background-color:#e09e00; }
+
+        /* Footer */
+        footer {
+            background-color:#333;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        /* Responsive */
+        @media(max-width:600px){
+            section#home .images img { width:100%; height:auto; }
+            header nav { display:flex; flex-direction:column; gap:10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Sweet Treats Bakery</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Sweet Treats Bakery!</h2>
+        <p>Freshly baked goodies every day.</p>
+        <div class="images">
+            <img src="images/cake1.jpg" alt="Cake" />
+            <img src="images/bread1.jpg" alt="Bread" />
+            <img src="images/pastry1.jpg" alt="Pastry" />
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Sweet Treats Bakery has been serving delicious cakes, pastries, and breads for over 10 years. Quality and taste is our promise!</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+            <li>Chocolate Cake</li>
+            <li>Blueberry Muffins</li>
+            <li>Fresh Breads</li>
+            <li>Pastries & Croissants</li>
+            <li>Custom Cakes</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Address: 123 Bakery Street, Sweet City</p>
+        <p>📞 Phone: +91 98765 43210</p>
+        <p>✉️ Email: contact@sweettreats.com</p>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sweet Treats Bakery. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form alert
+        document.getElementById("contactForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Thank you! Your message has been sent.");
+        });
+    </script>
+</body>
+</html>
